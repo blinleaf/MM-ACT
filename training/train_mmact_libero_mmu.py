@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from training.utils import get_config, mask_or_random_replace_action_tokens
 from training.prompting_utils import UniversalPrompting
 from training.libero_action_dataset import ActionGenerationWithVqaFromLeRobotDataset
-from models import MMACTConfig, MAGVITv2, get_mask_schedule
+from models import MMACTModelLM, MAGVITv2, get_mask_schedule
 from models.configuration_llada import ModelConfig
 from models.lr_schedulers import get_scheduler
 
@@ -79,7 +79,7 @@ def main():
         padding_side="left",
         local_files_only=True,
     )
-    model = MMACTConfig.from_pretrained(
+    model = MMACTModelLM.from_pretrained(
         config.model.mmact.pretrained_model_path, torch_dtype=torch.bfloat16
     )
     model.to(accelerator.device)
@@ -311,7 +311,7 @@ def main():
                     batch_size_lm=0,
                     batch_size_mmu=batch_size_mmu,
                     batch_size_action=0,
-                    max_action_length=0,
+                    max_action_prompt_len=0,
                     p_mask_mmu=p_mask_mmu,
                     answer_lengths_mmu=answer_lengths_mmu,
                     action_masks=None,

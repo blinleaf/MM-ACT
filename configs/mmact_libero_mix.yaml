@@ -32,7 +32,7 @@ training:
   # max_train_steps: 1000000
   dataprocess_nums: 16
   mmu_eps: 1e-3
-  loss_type: "single"
+  action_loss_type: "single"
   use_prev_action: False
 
 

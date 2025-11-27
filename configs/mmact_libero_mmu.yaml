@@ -26,7 +26,7 @@ training:
   log_interval: 50
   # max_train_steps: 1000000
   dataprocess_nums: 16
-  loss_type: "single"
+  action_loss_type: "single"
   mmu_eps: 1e-3 #if predict all mmu tokens in one step,set 1.0,else set 1e-3
   use_prev_action: False
 

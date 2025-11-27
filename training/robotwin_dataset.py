@@ -27,7 +27,7 @@ from PIL import Image
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from training.utils import image_transform, image_transform_tensor
+from training.utils import image_transform_tensor
 from torchvision import transforms
 from torchvision.transforms.functional import to_pil_image
 
@@ -827,7 +827,7 @@ class EpisodesHDF5Dataset(Dataset):
             "prev_action_tokens": prev_action_tokens,
             "action_dim": self.action_dim,
             # "ral_action": action_vals_raw,
-            # "de_action": action_vals
+            # "action": action_vals
             # "subtask_text": subtask_text,
             # "subtask_history": subtask_history,
             # "subtask_reasoning": subtask_reasoning,

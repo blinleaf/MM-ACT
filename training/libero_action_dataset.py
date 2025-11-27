@@ -5,7 +5,7 @@ from PIL import Image
 import torch
 import torch.nn.functional as F
 from torch.utils.data import Dataset
-from training.utils import image_transform, image_transform_tensor
+from training.utils import image_transform_tensor
 from lerobot.datasets.lerobot_dataset import LeRobotDataset
 import os
 import numpy as np

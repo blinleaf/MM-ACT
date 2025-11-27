@@ -320,9 +320,9 @@ def main():
                     labels,
                     attention_masks,
                     max_seq_length=max_action_prompt_len,  # important
-                    loss_type=config.training.loss_type,
-                    err_token_len=config.training.err_token_len,
-                    at_value=config.training.at_value,
+                    action_loss_type=config.training.action_loss_type
+                    # action_err_token_len=config.training.action_err_token_len,
+                    # at_value=config.training.at_value,
                 )
                 accelerator.backward(loss)
             if accelerator.sync_gradients:
