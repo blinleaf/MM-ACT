@@ -17,7 +17,7 @@ This repository contains:
 
 ### 1. Clone Repo and Environment Setup
 ```bash
-git clone [https://github.com/HHYHRHY/MM-ACT.git](https://github.com/HHYHRHY/MM-ACT.git)
+git clone https://github.com/HHYHRHY/MM-ACT.git
 cd MM-ACT
 
 # Create environment
@@ -70,7 +70,7 @@ For real robot, You can first convert your real-robot data into the LeRobot form
 Then refer to the [training/train_mmact_libero_action.py](training/train_mmact_libero_action.py) script to conduct real-robot data training.
 
 ## ⚡ Evaluation & Deployment
-Our trained model weight can be found at: (MM-ACT-weight)[huggingface_link]
+Our trained model weight can be found at: [MM-ACT-weight](huggingface_link])
 
 For **LIBERO** evalutation, please refer to [experiment/experiment_readme.md](experiment/experiment_readme.md) for detailed instructions.
 
