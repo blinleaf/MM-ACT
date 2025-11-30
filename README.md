@@ -61,7 +61,7 @@ python model_utils/resize_model_vocab.py --model ${origin_model_path} --out ${ou
 
 ## 🚀 Training
 
-We provide training pipelines for both LIBERO and RoboTwin. You can refer to the explanations of the configuration settings in [configs_readme.md](configs/configs_readme.md).
+We provide training pipelines for both LIBERO and RoboTwin. You can refer to the explanations of the configuration settings in [configs/README.md](configs/README.md).
 Single-node training can be launched using accelerate:
 
 ```bash
@@ -91,7 +91,7 @@ Then refer to the [training/train_mmact_libero_action.py](training/train_mmact_l
 
 Our trained model weight can be found at: [MM-ACT-weight](https://huggingface.co/hhyhrhy/MM-ACT-Model)
 
-For **LIBERO** evalutation, please refer to [experiments/experiment_readme.md](experiments/experiment_readme.md) for detailed instructions.
+For **LIBERO** evalutation, please refer to [experiments/README.md](experiments/README.md) for detailed instructions.
 
 For **RoboTwin** evaluation, please follow [Robotwin_subtask](github_link) instructions.
 
